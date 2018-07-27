@@ -31,7 +31,7 @@
       <%= link_to 'Borrowers', borrowers_path %>
     </li> -->
 
-    <% if current_lender %>
+    <% if current_lender || current_borrower %>
     <li class="nav-item">
          <%= link_to "Sign out", destroy_lender_session_path, method: :delete %>
     </li>
