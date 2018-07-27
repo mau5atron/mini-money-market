@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @lender.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @lender.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @lender.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @lender.phone %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @lender.street %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @lender.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @lender.zip %>
+</p>
+
+<%= link_to 'Edit', edit_lender_path(@lender) %> |
+<%= link_to 'Back', lenders_path %>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MiniMoneyMarket</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+  </head>
+
+  <nav>
+
+    <li class="nav-item">
+      <%= link_to 'home', root_path %>
+    </li>
+
+    <!-- <li class="nav-item">
+      <%= link_to 'Lenders', lenders_path %>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to 'Borrowers', borrowers_path %>
+    </li> -->
+
+    <% if current_lender %>
+    <li class="nav-item">
+         <%= link_to "Sign out", destroy_lender_session_path, method: :delete %>
+    </li>
+    <% else %>
+    <li class="nav-item">
+         <%= link_to "Register as Lender", new_lender_registration_path %>﻿﻿
+    </li>
+
+    <li class="nav-item">
+         <%= link_to "Register as Borrower", new_borrower_registration_path %>﻿﻿
+    </li>
+
+    <li class="nav-item">
+         <%= link_to "Login as Lender", new_lender_session_path %>﻿﻿
+    </li>
+
+    <li class="nav-item">
+         <%= link_to "Login as Borrower", new_borrower_session_path %>﻿﻿
+    </li>
+
+    <% end %>
+
+
+  </nav>
+
+  <body>
+    <div class="container py-5">
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

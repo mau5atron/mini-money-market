@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @borrower.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @borrower.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @borrower.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @borrower.phone %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @borrower.street %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @borrower.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @borrower.zip %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @borrower.company_name %>
+</p>
+
+<p>
+  <strong>Employer street:</strong>
+  <%= @borrower.employer_street %>
+</p>
+
+<p>
+  <strong>Employer state:</strong>
+  <%= @borrower.employer_state %>
+</p>
+
+<p>
+  <strong>Employer zip:</strong>
+  <%= @borrower.employer_zip %>
+</p>
+
+<p>
+  <strong>Current position:</strong>
+  <%= @borrower.current_position %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @borrower.start_date %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @borrower.salary %>
+</p>
+
+<%= link_to 'Edit', edit_borrower_path(@borrower) %> |
+<%= link_to 'Back', borrowers_path %>
