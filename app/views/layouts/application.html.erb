@@ -21,7 +21,16 @@
       money
       market
       </span>
-      <span class="menu">  
+      <div id="myNav" class="overlay">
+        <!-- this will close the overlay -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- overlay menu content -->
+        <div class="overlay-content">
+          <a href="">hello</a>
+          <a href="">bitch</a>
+        </div>
+      </div>
+      <span class="menu" onclick="openNav()" aria-hidden="true">  
         <i class="fas fa-bars"></i>
       </span>
     </div>
@@ -63,13 +72,12 @@
     <% end %>
 
   </nav>
-
+  
   <body>
     <div class="container py-5">
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-
       <%= yield %>
     </div>
   </body>
