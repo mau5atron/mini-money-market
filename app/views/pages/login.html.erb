@@ -1,4 +1,7 @@
-<h1> Pages#login </h1>
-<%= link_to "Login as Lender", new_lender_session_path %>﻿﻿
-<br>
-<%= link_to "Login as Borrower", new_borrower_session_path %>﻿﻿
+<h1 style="text-align: center; font-size: 4rem;">Login</h1>
+<div class="login-modal">
+	<%= render 'lender-login'%>
+</div>
+<div class="login-modal">
+	<%= render 'borrower-login' %>
+</div>

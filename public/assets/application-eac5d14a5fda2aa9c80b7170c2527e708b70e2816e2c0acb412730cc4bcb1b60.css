@@ -1,0 +1,93 @@
+/* line 2, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.nav-mobile {
+  background: lightblue;
+  height: 11.3vh;
+}
+
+/* line 7, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.mini-money-market {
+  font-size: 3rem;
+  line-height: 1.9rem;
+  width: 100vw;
+}
+
+/* line 13, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.mmm {
+  font-family: monospace;
+  float: left;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  width: 20vw;
+}
+
+/* line 22, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.menu {
+  font-size: 6rem;
+  float: right;
+  margin-top: 2.9rem;
+  margin-right: 2.5rem;
+}
+
+/* line 29, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/* line 41, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* line 49, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* line 58, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* line 62, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12rem;
+  margin-top: 4rem;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
