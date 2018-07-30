@@ -1,7 +1,17 @@
 <h1 style="text-align: center; font-size: 4rem;">Login</h1>
-<div class="login-modal">
+<div class="login-modal-lender">
 	<%= render 'lender-login'%>
 </div>
-<div class="login-modal">
+<div class="login-modal-borrower">
 	<%= render 'borrower-login' %>
+</div>
+<div style="font-size: 2rem; text-align: center;">
+  <span>
+  	*Don't have an account?
+  </span>
+  <div>
+  	<button type="button" class="btn btn-signup">
+			<%= link_to 'Sign up here', pages_register_path, style:"color: white;"%>
+  	</button>
+  </div>
 </div>

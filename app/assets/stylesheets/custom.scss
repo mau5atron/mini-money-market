@@ -42,7 +42,6 @@
 	position: relative;
 	top: 25%;
 	width: 100%;
-	text-align: center;
 	margin-top: 30px;
 	color: white;
 }
@@ -52,14 +51,10 @@
 	text-decoration: none;
 	font-size: 36px;
 	color: #818181;
-	display: block;
 	transition: 0.3s;
-	display: block;
-  margin-right: 20rem;
   font-size: 6.4rem;
-  margin-bottom: 4.5rem;
-  float: left;
  	margin-left: 25rem;
+ 	line-height: 10rem;
 }
 
 .overlay a:hover, .overlay a:focus, .overlay a:active, .overlay a:visited {
@@ -91,14 +86,23 @@
 	font-size: 3rem;
 	margin-left: 28%;
 	width: 100vw;
+	margin: auto;
 }
 
-.login-modal {
+.login-modal-lender {
 	text-align: center;
 	text-align: center;
 	padding-top: 1rem;
   margin-bottom: 2rem;
 }
+
+.login-modal-borrower {
+	text-align: center;
+	text-align: center;
+	padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 
 input[type=checkbox] {
   transform: scale(3);
@@ -109,12 +113,29 @@ input[type=checkbox] {
 button {
 	font-size: 3.5rem !important;
 	width: 60vw;
+	border-radius: 2rem;
+	color: white;
 }
 
 button span {
 	float: right;
+	margin-right: -7rem;
+	margin-top: 2rem;
 }
 
 input {
 	border: 1px solid black;
+	text-indent: 12px;
+}
+
+i {
+	font-size: 6rem;
+}
+
+.btn-signup {
+	background-color: rgb(86, 140, 205);
+}
+
+.btn-signin {
+	background-color: rgb(96, 209, 97);
 }

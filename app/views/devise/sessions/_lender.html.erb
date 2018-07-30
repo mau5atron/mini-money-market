@@ -1,22 +1,20 @@
 <%= form_for(:lender, url: session_path(:lender)) do |f| %>
   <div class="field">
-    <%= f.label :email, style:"font-size: 3rem;"%><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", style:"font-size: 3rem;"%>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", style:"font-size: 3rem; margin-bottom: 2rem;", placeholder:"email"%>
   </div>
-
+  <br>
   <div class="field">
-    <%= f.label :password, style:"font-size: 3rem;"%><br />
-    <%= f.password_field :password, autocomplete: "off", style:"font-size: 3rem;"%>
+    <%= f.password_field :password, autocomplete: "off", style:"font-size: 3rem;", placeholder:"password"%>
   </div>
-
+  <br>
   <% if devise_mapping_lender.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me, style:"font-size: 3rem;"%>
       <%= f.label :remember_me, style:"font-size: 3rem;"%>
     </div>
   <% end -%>
-
+  <br>
   <div class="actions">
-    <%= f.submit "Log in", class:"btn btn-primary", style:"font-size: 3rem;"%>
+    <%= f.submit "Log in", class:"btn btn-signin", style:"font-size: 3rem; width: 50vw;"%>
   </div>
 <% end %>

@@ -12,10 +12,11 @@
       <div class="overlay-content">
         <%= link_to 'Home', root_path %>
         <% if current_lender || current_borrower %>
-          <%= link_to "Sign out", destroy_lender_session_path, method: :delete %>
+          <%= link_to "Sign out", destroy_lender_session_path, method: :delete %><i class="fas fa-sign-out-alt"></i>
         <% else %>
-          <%= link_to "Login", pages_login_path %>﻿﻿
+          <%= link_to "Login", pages_login_path %>
         <% end %>
+          <%= link_to 'About'%>
       </div>
     </div>
     <span class="menu" onclick="openNav()" aria-hidden="true">  
