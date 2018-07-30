@@ -2,21 +2,21 @@
   <%#= devise_error_messages! %>
 
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"email", style:"font-size: 3rem; margin-bottom: 2rem;"%>
   </div>
 
   <div class="field">
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", placeholder:"password"%>
+    <%= f.password_field :password, autocomplete: "off", placeholder:"password", style:"font-size: 3rem;"%>
   </div>
 
   <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"passowrd confirmation"%>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"passowrd confirmation", style:"font-size: 3rem;"%>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class:"btn btn-signin", style:"font-size: 3rem; width: 50vw;" %>
   </div>
 <% end %>

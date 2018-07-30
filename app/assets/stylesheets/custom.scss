@@ -1,6 +1,6 @@
 // mobile navigation styling
 .nav-mobile {
-	background: lightblue;
+	background-color: rgb(86, 140, 205);
 	height: 11.3vh;
 }
 
@@ -80,6 +80,7 @@
 	margin-left: -7rem;
 	border-radius: 0rem;
 	overflow-y: scroll;
+	text-align: center;
 }
 
 #myModalLabel {
@@ -89,15 +90,13 @@
 	margin: auto;
 }
 
-.login-modal-lender {
-	text-align: center;
+.login-modal-lender {	
 	text-align: center;
 	padding-top: 1rem;
   margin-bottom: 2rem;
 }
 
 .login-modal-borrower {
-	text-align: center;
 	text-align: center;
 	padding-top: 1rem;
   margin-bottom: 2rem;

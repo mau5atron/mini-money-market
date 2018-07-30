@@ -1,16 +1,15 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalLenderSignup">
-  Lender signup
+<button type="button" class="btn btn-signup" data-toggle="modal" data-target="#myModalLenderRegistration">
+  Borrower signup
 </button>
-
 <!-- Modal -->
-<div class="modal fade" id="myModalLenderSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModalLenderRegistration" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div id="custom-modal" class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
       <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Lender signup</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title" id="myModalLabel">Borrower signup</h5>
       </div>
       <div class="modal-body">
         <%= render 'devise/registrations/lender' %>

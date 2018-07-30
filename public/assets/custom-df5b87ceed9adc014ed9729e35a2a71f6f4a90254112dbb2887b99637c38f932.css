@@ -1,0 +1,155 @@
+/* line 2, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.nav-mobile {
+  background-color: #568ccd;
+  height: 11.3vh;
+}
+
+/* line 7, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.mini-money-market {
+  font-size: 3rem;
+  line-height: 1.9rem;
+  width: 100vw;
+}
+
+/* line 13, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.mmm {
+  font-family: monospace;
+  float: left;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  width: 20vw;
+}
+
+/* line 22, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.menu {
+  font-size: 6rem;
+  float: right;
+  margin-top: 2.9rem;
+  margin-right: 2.5rem;
+}
+
+/* line 29, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/* line 41, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  margin-top: 30px;
+  color: white;
+}
+
+/* line 49, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  transition: 0.3s;
+  font-size: 6.4rem;
+  margin-left: 25rem;
+  line-height: 10rem;
+}
+
+/* line 60, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay a:hover, .overlay a:focus, .overlay a:active, .overlay a:visited {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+/* line 65, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.overlay .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12rem;
+  margin-top: 4rem;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+/* line 77, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+#custom-modal {
+  height: 50vh;
+  width: 75vw;
+  margin-left: -7rem;
+  border-radius: 0rem;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+/* line 86, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+#myModalLabel {
+  font-size: 3rem;
+  margin-left: 28%;
+  width: 100vw;
+  margin: auto;
+}
+
+/* line 93, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.login-modal-lender {
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* line 99, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.login-modal-borrower {
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* line 106, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+input[type=checkbox] {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  margin-right: 2rem;
+}
+
+/* line 112, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+button {
+  font-size: 3.5rem !important;
+  width: 60vw;
+  border-radius: 2rem;
+  color: white;
+}
+
+/* line 119, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+button span {
+  float: right;
+  margin-right: -7rem;
+  margin-top: 2rem;
+}
+
+/* line 125, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+input {
+  border: 1px solid black;
+  text-indent: 12px;
+}
+
+/* line 130, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+i {
+  font-size: 6rem;
+}
+
+/* line 134, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.btn-signup {
+  background-color: #568ccd;
+}
+
+/* line 138, /Users/mau5atron/Desktop/mini_money_market/app/assets/stylesheets/custom.scss */
+.btn-signin {
+  background-color: #60d161;
+}
