@@ -4,7 +4,7 @@ class BorrowersController < ApplicationController
   # GET /borrowers
   # GET /borrowers.json
   def index
-    @borrowers = Borrower.all
+    # @borrowers = Borrower.all
   end
 
   # GET /borrowers/1

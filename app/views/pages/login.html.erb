@@ -1,17 +1,26 @@
-<h1 style="text-align: center; font-size: 4rem;">Login</h1>
-<div class="login-modal-lender">
-	<%= render 'lender-login'%>
-</div>
-<div class="login-modal-borrower">
-	<%= render 'borrower-login' %>
-</div>
-<div style="font-size: 2rem; text-align: center;">
-  <span>
-  	*Don't have an account?
-  </span>
-  <div>
-  	<button type="button" class="btn btn-signup">
-			<%= link_to 'Sign up here', pages_register_path, style:"color: white;"%>
-  	</button>
+<div class="container" style="text-align: center;">
+  <h1>Login</h1>
+  <nav class="navbar-links">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Borrower</a>
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Lender</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-borrower-tab">
+      <%= render 'devise/sessions/borrower' %>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-lender-tab">
+      <%= render 'devise/sessions/lender' %>
+    </div>
   </div>
+  <div class="dont-have-an-account"> 
+    <div>
+      *Don't have an account?
+    </div>
+    <div>
+      <%= link_to 'Sign up here', pages_register_path %>
+    </div>
+  </div>
+</div>
 </div>

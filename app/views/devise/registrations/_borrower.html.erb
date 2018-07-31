@@ -2,95 +2,47 @@
   <%#= devise_error_messages! %>
 
   <br>
-  <br>
-
-  <div class="field">
-    <%= form.email_field :email, autofocus: true, autocomplete: "email", placeholder:"email", style:"font-size: 3rem;"%>
-  </div>
-
   <div class="field">
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em class="form-control form-styling">(<%= @minimum_password_length %> characters minimum)</em>
     <% end %>
 
-
-      <div class="field">
-        <%= form.label :first_name %>
-        <%= form.text_field :first_name, id: :borrower_first_name %>
-      </div>
-
-      <div class="field">
-        <%= form.label :last_name %>
-        <%= form.text_field :last_name, id: :borrower_last_name %>
-      </div>
-
-      <div class="field">
-        <%= form.label :phone %>
-        <%= form.number_field :phone, id: :borrower_phone %>
-      </div>
-
-      <div class="field">
-        <%= form.label :street %>
-        <%= form.text_field :street, id: :borrower_street %>
-      </div>
-
-      <div class="field">
-        <%= form.label :state %>
-        <%= form.text_field :state, id: :borrower_state %>
-      </div>
-
-      <div class="field">
-        <%= form.label :zip %>
-        <%= form.number_field :zip, id: :borrower_zip %>
-      </div>
-
-      <div class="field">
-        <%= form.label :company_name %>
-        <%= form.text_field :company_name, id: :borrower_company_name %>
-      </div>
-
-      <div class="field">
-        <%= form.label :employer_street %>
-        <%= form.text_field :employer_street, id: :borrower_employer_street %>
-      </div>
-
-      <div class="field">
-        <%= form.label :employer_state %>
-        <%= form.text_field :employer_state, id: :borrower_employer_state %>
-      </div>
-
-      <div class="field">
-        <%= form.label :employer_zip %>
-        <%= form.number_field :employer_zip, id: :borrower_employer_zip %>
-      </div>
-
-      <div class="field">
-        <%= form.label :current_position %>
-        <%= form.text_field :current_position, id: :borrower_current_position %>
-      </div>
-
-      <div class="field">
-        <%= form.label :start_date %>
-        <%= form.text_field :start_date, id: :borrower_start_date %>
-      </div>
-
-      <div class="field">
-        <%= form.label :salary %>
-        <%= form.number_field :salary, id: :borrower_salary %>
-      </div>
-
-
-
-
-    <%= form.password_field :password, autocomplete: "off", placeholder:"password", style:"font-size: 3rem;"%>
+  <div class="field">
+    <%= form.text_field :first_name, id: :borrower_first_name, placeholder:"first name", class:"form-control", id:"form-styling" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.text_field :last_name, id: :borrower_last_name, placeholder:"last name", class:"form-control", id:"form-styling" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.email_field :email, autofocus: true, autocomplete: "email", 
+    placeholder:"email", class:"form-control", id:"form-styling" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.number_field :phone, id: :borrower_phone, placeholder:"phone", class:"form-control", id:"form-styling"%>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.text_field :street, id: :borrower_street, placeholder:"street", class:"form-control", id:"form-styling" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.select :state, options_for_select(us_states),
+    id: :borrower_state, placeholder:"select state", class:"form-control", id:"form-styling state-dropdown"%>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.number_field :zip, id: :borrower_zip, placeholder:"zip", class:"form-control", id:"form-styling" %>
+  </div>
+    <%= form.password_field :password, autocomplete: "off", placeholder:"password", class:"form-control", id:"form-styling"%>
   </div>
 
   <div class="field">
-    <%= form.password_field :password_confirmation, autocomplete: "off", placeholder:"password confirmation", style:"font-size: 3rem;"%>
+    <%= form.password_field :password_confirmation, autocomplete: "off", placeholder:"password confirmation", class:"form-control", id:"form-styling"%>
   </div>
-
   <br>
-
   <div class="actions">
     <%= form.submit "Sign up", class:"btn btn-signin", style:"font-size: 3rem; width: 50vw"%>
   </div>
