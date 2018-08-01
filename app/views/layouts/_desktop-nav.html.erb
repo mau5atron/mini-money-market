@@ -1,0 +1,28 @@
+<nav id="nav-desktop" class="nav">
+  <div class="container">
+    <div class="pull-left">
+      <h1 class="site-title">
+        Mini
+        Money
+        Market
+      </h1>
+    </div>
+    <div class="pull-right">
+      <ul class="nav-list">
+        <li>
+          <%= link_to 'Home', root_path %>
+        </li>
+        <li>
+          <% if current_lender || current_borrower %>
+            <%= link_to "Sign out", destroy_lender_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Login", pages_login_path %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'About'%>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

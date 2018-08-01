@@ -6,7 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 gem 'bootstrap'
-gem 'jquery-rails'  
+gem 'jquery-rails' 
+# gem 'devise_security_extension' deprecated version, supplied updated version
+# gem 'devise_security_extension', :path => "lib/gems/devise_security_extension-0.9.2" does not work!!!
+
+# pull straight from github, gem package on ruby gems is not passing
+gem 'devise_security_extension', git: 'https://github.com/phatworx/devise_security_extension.git'
+gem 'rails_email_validator'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

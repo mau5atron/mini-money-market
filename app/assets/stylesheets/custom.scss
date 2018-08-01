@@ -172,3 +172,120 @@ form {
 //   height: 3vh !important;
 // }
 
+// DESKTOP
+// -----------------------------------------------------------------
+#nav-desktop {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  height: 150px;
+  width: 100%;
+  background:  rgb(86, 140, 205);
+  color: #fff;
+  line-height: 150px;
+  -webkit-transition: height .5s, line-height .5s; /* Safari */
+  transition: height .5s, line-height .5s;
+}
+
+.site-title {
+  display: inline-block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  width: 12vw;
+  font-family: monospace;
+	float: left;
+	margin-top: 1rem;
+}
+
+.site-title-container{
+  width: 100vw;
+}
+.scrolled-nav .site-title  {
+  font-size: 16px;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  list-style: none;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+
+.scrolled-nav {
+  height: 60px !important;
+  line-height: 60px !important;
+}
+
+.counter {
+  width: 20px;
+  height: 20px;
+  background: black;
+  color: #fff;
+  position: fixed;
+  top: 120px;
+  right: 0;
+}
+
+// -----------------------------------------------------------------
+
+
+
+
+
+@media only screen and (min-device-width : 0px) and (max-device-width : 319px){
+	#nav-desktop{
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width : 320px){
+	.nav-mobile {
+		height: 11.3vh;
+		padding-top: 0;
+	}
+	#nav-desktop{
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width : 500px) and (max-device-width : 600px){
+	.nav-mobile {
+		height: 15.3vh;
+		padding-top: 0;
+	}
+	#nav-desktop{
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width : 601px) and (max-device-width : 767px){
+	.nav-mobile {
+		height: 17.3vh;
+		padding-top: 0;
+	}
+	#nav-desktop{
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width : 768px){
+	.nav-mobile {
+		display: none;
+	}
+}
+
+// @media only screen and (max-device-width : 600px){
+// 	.nav-mobile{
+// 		height: 26.3vh;
+// 	}
+// }
+
+// @media only screen and (max-device-width : 740px) and (orientation : landscape) {
+// // 	.nav-mobile {
+// // 		height: 34vh;
+// // 	}
+// // }

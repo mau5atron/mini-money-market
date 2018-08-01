@@ -11,7 +11,9 @@
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> characters minimum )</em>
+    <% elsif @maximum_password_length %> 
+    <em>(<%= @maximum_password_length %> characters maximum )</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
