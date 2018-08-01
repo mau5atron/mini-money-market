@@ -3,6 +3,4 @@ class Borrower < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :secure_validatable, password_length: 6..24
-  # when updating fields
-  validates: 
 end
