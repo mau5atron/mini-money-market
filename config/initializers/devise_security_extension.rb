@@ -7,8 +7,9 @@ Devise.setup do |config|
 
   # Need 1 char of A-Z, a-z and 0-9
   # config.password_regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/
-  # require 1 alphanumeric and 1 numeric
-  config.password_regex = /^([a-zA-Z0-9]+)$/
+
+  # require 1 alphabetic and 1 numeric character
+  config.password_regex = /([a-zA-Z0-9]+)/
 
   # How many passwords to keep in archive
   # config.password_archiving_count = 5
