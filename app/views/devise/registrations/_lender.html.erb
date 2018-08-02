@@ -1,6 +1,6 @@
-<%= form_for(:lender, url: registration_path(:lender)) do |f| %>
+<%= form_for(:lender, url: registration_path(:lender), :html => { :id => 'lender_form'} ) do |f| %>
   <%#= devise_error_messages! %>
-
+  
   <div class="field">
     <%= f.text_field :first_name, id: :lender_first_name, placeholder:"first name", class:"form-control", id:"form-styling" %>
   </div>

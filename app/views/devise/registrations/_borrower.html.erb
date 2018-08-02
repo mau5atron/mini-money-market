@@ -1,6 +1,5 @@
-<%= form_for(:borrower, url: registration_path(:borrower)) do |form| %>
-  <%#= devise_error_messages! %>
-
+<%= form_for(:borrower, url: registration_path(:borrower), :html => {:name => 'borrower', :id => 'borrower_form'}) do |form| %>
+  
   <br>
   <div class="field">
     <% if @minimum_password_length %>

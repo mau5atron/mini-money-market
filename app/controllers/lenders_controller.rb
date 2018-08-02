@@ -4,7 +4,7 @@ class LendersController < ApplicationController
   # GET /lenders
   # GET /lenders.json
   def index
-    @lenders = Lender.all
+    # @lenders = Lender.all
   end
 
   # GET /lenders/1
@@ -15,6 +15,7 @@ class LendersController < ApplicationController
   # GET /lenders/new
   def new
     @lender = Lender.new
+    
   end
 
   # GET /lenders/1/edit
@@ -31,7 +32,7 @@ class LendersController < ApplicationController
         format.html { redirect_to @lender, notice: 'Lender was successfully created.' }
         format.json { render :show, status: :created, location: @lender }
       else
-        format.html { render :new }
+        format.html { render :url => 'pages/register'}
         format.json { render json: @lender.errors, status: :unprocessable_entity }
       end
     end

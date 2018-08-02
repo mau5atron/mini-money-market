@@ -13,6 +13,7 @@ gem 'jquery-rails'
 # pull straight from github, gem package on ruby gems is not passing
 gem 'devise_security_extension', git: 'https://github.com/phatworx/devise_security_extension.git'
 gem 'rails_email_validator'
+gem 'client_side_validations'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

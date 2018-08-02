@@ -3,7 +3,7 @@ en:
     messages:
       taken_in_past: "was used previously."
       equal_to_current_password: "must be different than the current password."
-      password_format: "must contain at least 1 alphanumeric character and 1 numeric character"
+      password_format: "must contain at least 1 alphabetic character and 1 numeric character"
   devise:
     invalid_captcha: "The captcha input was invalid."
     invalid_security_question: "The security question answer was invalid."
