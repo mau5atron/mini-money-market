@@ -9,10 +9,11 @@
       <!-- this will close the overlay -->
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <!-- overlay menu content -->
-      <div class="overlay-content">
+      <div class="overlay-content" style="margin-left: -10%;">
         <%= link_to 'Home', root_path %>
         <% if current_lender || current_borrower %>
-          <%= link_to "Sign out", destroy_lender_session_path, method: :delete %><i class="fas fa-sign-out-alt"></i>
+          <%= link_to 'Dashboard', dashboard_path %>
+          <%= link_to "Sign out", destroy_lender_session_path, method: :delete %>
         <% else %>
           <%= link_to "Login", pages_login_path %>
         <% end %>
