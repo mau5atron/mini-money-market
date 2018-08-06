@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180806060634) do
+ActiveRecord::Schema.define(version: 20180806124645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20180806060634) do
     t.string "employer_state"
     t.integer "employer_zip"
     t.string "current_position"
-    t.string "start_date"
     t.integer "salary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -46,8 +45,25 @@ ActiveRecord::Schema.define(version: 20180806060634) do
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.string "city"
+    t.integer "routing_number"
+    t.integer "bank_account"
+    t.integer "monthly_income"
+    t.integer "loan_amount"
+    t.string "loan_term"
+    t.string "employer_phone"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.index ["email"], name: "index_borrowers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_borrowers_on_reset_password_token", unique: true
+  end
+
+  create_table "central_markets", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "lender_id"
+    t.bigint "borrower_id"
+    t.index ["borrower_id"], name: "index_central_markets_on_borrower_id"
+    t.index ["lender_id"], name: "index_central_markets_on_lender_id"
   end
 
   create_table "lenders", force: :cascade do |t|
@@ -74,8 +90,17 @@ ActiveRecord::Schema.define(version: 20180806060634) do
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.string "city"
+    t.integer "routing_number"
+    t.integer "bank_account_number"
+    t.string "employer_name"
+    t.integer "employer_phone"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "deposit_amount"
     t.index ["email"], name: "index_lenders_on_email", unique: true
     t.index ["reset_password_token"], name: "index_lenders_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "central_markets", "borrowers"
+  add_foreign_key "central_markets", "lenders"
 end
