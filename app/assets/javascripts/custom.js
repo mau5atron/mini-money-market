@@ -40,7 +40,7 @@ window.onload =	function current_url(){
 									if (window.location.pathname === "/lenders"){
 								     // document.borrower.action = "/lenders";
 								     document.getElementById('borrower_form').style.display = 'none';
-								  } else {
+								  } else if (window.location.pathname === "/borrower"){
 								     document.getElementById('lender_form').style.display = 'none';
 									}
 								} 

@@ -1,1 +1,18 @@
-<h1 style="padding-top: 150px">This is my dashboard</h1>
+<div class="center">
+	<% if current_borrower %>
+		<h1>Welcome <%= current_borrower.first_name %>!</h1>	
+		<h1>You stupid fucking bitch</h1>
+	
+
+
+
+
+	<% elsif current_lender %>
+		<h1>Welcome <%= current_lender.first_name %>!</h1>
+
+
+
+
+
+	<% end %>
+</div>

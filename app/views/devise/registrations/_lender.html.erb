@@ -23,6 +23,10 @@
   </div>
   <br>
   <div class="field">
+    <%= f.text_field :city, id: :lender_city, placeholder:"city", class:"form-control", id:"form-styling" %>
+  </div>
+  <br>
+  <div class="field">
     <%= f.select :state, options_for_select(us_states), 
      id: :lender_state, placeholder:"select state", class:"form-control", id:"form-styling state-dropdown" %>
   </div>
