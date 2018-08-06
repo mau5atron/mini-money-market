@@ -2,17 +2,82 @@
 	<% if current_borrower %>
 		<h1>Welcome <%= current_borrower.first_name %>!</h1>	
 		<h1>You stupid fucking bitch</h1>
-	
+		
 
 
 
 
 	<% elsif current_lender %>
 		<h1>Welcome <%= current_lender.first_name %>!</h1>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong">
+		  Invest
+		</button>
 
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		  <div id="modal-dialog" class="modal-dialog" role="document">
+		    <div id="modal-content" class="modal-content">
+		      <div class="modal-header">
+		        <h1 id="modal-tile" class="modal-title" id="exampleModalLongTitle" style="margin-left: 12% !important;
+		  width: 275rem !important;">Investment Details</h1>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span class="close-btn-modal" aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+						<%= form_for(:lender, :html => { :id => 'lender_form'} ) do |f| %>  
+						  <div class="field">
+						    <%= f.number_field :routing_number, id: :lender_routing_number, placeholder:"routing number", class:"form-control", id:"form-styling" %>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.number_field :bank_account, id: :lender_bank_account, placeholder:"bank account", class:"form-control", id:"form-styling"%>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.number_field :deposit_amount, placeholder:"deposit amount", class:"form-control", id:"form-styling"%>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.number_field :phone, id: :lender_phone, placeholder:"phone", class:"form-control", id:"form-styling" %>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.text_field :street, id: :lender_street, placeholder:"street", class:"form-control", id:"form-styling"%>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.text_field :city, id: :lender_city, placeholder:"city", class:"form-control", id:"form-styling" %>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.select :state, options_for_select(us_states), 
+						     id: :lender_state, placeholder:"select state", class:"form-control", id:"form-styling state-dropdown" %>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.number_field :zip, id: :lender_zip, placeholder:"zip", class:"form-control", id:"form-styling" %>
+						  </div>
+						  <br>
+						  <div>
+						    <%= f.password_field :password, autocomplete: "off",
+						     placeholder:"password", class:"form-control", id:"form-styling"%>
+						  </div>
+						  <br>
+						  <div class="field">
+						    <%= f.password_field :password_confirmation, autocomplete: "off", 
+						    placeholder:"passowrd confirmation", class:"form-control", id:"form-styling" %>
+						  </div>
+						  <br>
+						  <div class="actions">
+						    <%= f.submit "Sign up", class:"btn btn-signin", style:"font-size: 3rem; width: 50vw;" %>
+						  </div>
+						<% end %>
 
-
-
-
+		      </div>
+		    </div>
+		  </div>
+		</div>
 	<% end %>
 </div>

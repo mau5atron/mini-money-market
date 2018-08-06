@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180806124645) do
+ActiveRecord::Schema.define(version: 20180806140847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,8 +53,10 @@ ActiveRecord::Schema.define(version: 20180806124645) do
     t.string "employer_phone"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.string "transaction_id"
     t.index ["email"], name: "index_borrowers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_borrowers_on_reset_password_token", unique: true
+    t.index ["transaction_id"], name: "index_borrowers_on_transaction_id"
   end
 
   create_table "central_markets", force: :cascade do |t|
@@ -97,8 +99,10 @@ ActiveRecord::Schema.define(version: 20180806124645) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer "deposit_amount"
+    t.string "transaction_id"
     t.index ["email"], name: "index_lenders_on_email", unique: true
     t.index ["reset_password_token"], name: "index_lenders_on_reset_password_token", unique: true
+    t.index ["transaction_id"], name: "index_lenders_on_transaction_id"
   end
 
   add_foreign_key "central_markets", "borrowers"
